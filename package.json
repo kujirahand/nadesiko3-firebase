@@ -1,0 +1,23 @@
+{
+  "name": "nadesiko3-firebase",
+  "version": "1.0.0",
+  "description": "なでしこ3のためのFirebaseプラグイン - https://nadesi.com",
+  "main": "plugin_firebase.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kujirahand/nadesiko3-firebase.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kujirahand/nadesiko3-firebase/issues"
+  },
+  "homepage": "https://github.com/kujirahand/nadesiko3-firebase#readme",
+  "dependencies": {
+    "firebase": "^4.9.1"
+  }
+}

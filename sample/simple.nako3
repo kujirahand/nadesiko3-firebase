@@ -1,0 +1,19 @@
+# FIREBASEを使う簡単にサンプル
+!「../plugin_firebase」を取り込む。
+
+# Firebaseの初期化処理(★あらかじめ README.md を見て、firebase.json を用意してください★)
+HOME=「HOME」の環境変数取得。
+「{HOME}/firebase.json」を開く。表示
+それをJSONデコードして、F設定に代入。
+F設定でFIREBASE初期化。
+「初期化しました」と表示。
+
+# データベースの値変更を監視
+「/」のFIREBASE値変更した時には(値)
+    「変更がありました」と表示。
+    値をJSONエンコードして表示。
+ここまで
+
+# 値を変更する
+「/」に{"a":10, "b": 40の乱数}をFIREBASE値設定。
+「値を設定しました」と表示。
