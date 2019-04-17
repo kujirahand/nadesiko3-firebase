@@ -12,7 +12,7 @@ const PluginFirebase = {
     }
   },
   // @Firebase
-  'FIREBASE初期化': { // @アカウント設定オブジェクトconfigを与えてFirebaseを初期化する //@FIREBASEしょきか
+  'FIREBASE初期化': { // @アカウント設定オブジェクトconfigを与えてFirebaseを初期化する // @FIREBASEしょきか
     type: 'func',
     josi: [['で']],
     fn: function (config, sys) {
@@ -21,7 +21,7 @@ const PluginFirebase = {
       return defaultDB
     }
   },
-  'FIREBASEパス参照': { // @データベースのパスPATHを参照 //@FIREBASEぱすさんしょう
+  'FIREBASEパス参照': { // @データベースのパスPATHを参照 // @FIREBASEぱすさんしょう
     type: 'func',
     josi: [['を']],
     fn: function (path, sys) {
@@ -29,7 +29,7 @@ const PluginFirebase = {
       return defaultDB.ref(path)
     }
   },
-  'FIREBASE値設定': { // @データベースのパスPATHにオブジェクトVALUESを設定 //@FIREBASEせっていs
+  'FIREBASE値設定': { // @データベースのパスPATHにオブジェクトVALUESを設定 // @FIREBASEせっていs
     type: 'func',
     josi: [['に', 'へ'], ['を', 'の']],
     fn: function (path, values, sys) {
@@ -37,7 +37,7 @@ const PluginFirebase = {
       defaultDB.ref(path).set(values)
     }
   },
-  'FIREBASE値変更時': { // @パスpathの値(オブジェクト)が変更された時callbackを実行。引数に値(オブジェクト)が得られる。 //@FIREBASEへんこうしたとき
+  'FIREBASE値変更時': { // @パスpathの値(オブジェクト)が変更された時callbackを実行。引数に値(オブジェクト)が得られる。 // @FIREBASEへんこうしたとき
     type: 'func',
     josi: [['で'], ['の']],
     fn: function (callback, path, sys) {
@@ -48,7 +48,7 @@ const PluginFirebase = {
       })
     }
   },
-  'FIREBASE値取得時': { // @パスpathの値を取得した時callbackを実行。引数に値(オブジェクト)が得られる。 //@FIREBASEしゅとくしたとき
+  'FIREBASE値取得時': { // @パスpathの値を取得した時callbackを実行。引数に値(オブジェクト)が得られる。 // @FIREBASEしゅとくしたとき
     type: 'func',
     josi: [['で'], ['の']],
     fn: function (callback, path, sys) {
