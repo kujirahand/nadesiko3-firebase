@@ -1,8 +1,9 @@
 // Firebase for なでしこ3
 
-const firebase = require('firebase')
-let defaultDB = null
+const admin = require('firebase-admin');
+const PROJECT_ID = 'hello-74aaa'
 const ERROR_NOT_INIT = '最初に『FIREBASE初期化』でアカウント情報を設定してください。'
+let defaultDB = null
 
 const PluginFirebase = {
   '初期化': {
@@ -16,8 +17,12 @@ const PluginFirebase = {
     type: 'func',
     josi: [['で']],
     fn: function (config, sys) {
-      firebase.initializeApp(config)
-      defaultDB = firebase.database()
+      admin.initializeApp({
+        credential: admin.credential.cert(config),
+        databaseURL: `https://${PROJECT_ID}.firebaseio.com`, // Firebase Realtime DatabaseのURL
+      });
+      sys.tags.firebase = admin.database()
+      defaultDB = admin.database()
       return defaultDB
     }
   },

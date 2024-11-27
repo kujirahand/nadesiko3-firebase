@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/kujirahand/nadesiko3-firebase#readme",
   "dependencies": {
-    "firebase": "^4.9.1"
+    "firebase-admin": "^13.0.1"
   }
 }
